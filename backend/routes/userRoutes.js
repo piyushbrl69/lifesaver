@@ -18,6 +18,9 @@ router.post("/create", async (req, res) => {
 });
 
 // GET USER
+router.get("/test", (req, res) => {
+  res.send("API working");
+});
 router.get("/:id", async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
